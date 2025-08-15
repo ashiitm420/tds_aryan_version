@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "tds-data-analyzer-2025",
   "builds": [
     {
       "src": "api/index.py",
