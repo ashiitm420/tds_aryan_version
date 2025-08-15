@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "env": {
+    "API_KEY": "@api_key",
+    "OCR_API_KEY": "@ocr_api_key",
+    "gemini_api": "@gemini_api",
+    "gemini_api_2": "@gemini_api_2",
+    "grok_api": "@grok_api"
+  },
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60
+    }
+  }
+}
